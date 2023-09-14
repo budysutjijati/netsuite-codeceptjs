@@ -26,7 +26,7 @@ To successfully bypass the security questions, it is recommended to utilize the 
 
 Rest assured, I am exploring more streamlined methods to facilitate this process in the future.
 
-Next, create an .env file that contains the following environment variables:
+Next, create an .env file at the root directory that contains the following environment variables:
 
 ```
 NS_COMPANY_NAME=YOUR_COMPANY_LEGAL_NAME
@@ -45,7 +45,6 @@ NS_SECURITY_QUESTION_GRANDMOTHER=YOUR_SECURITY_ANSWER
 For the 2FAKEY environment variable see the 2FA Secret key section.
 
 Now you can execute the following command ```npx codeceptjs run``` and see CodeceptJS in action. 
-
 
 ## 2FA Secret key
 
