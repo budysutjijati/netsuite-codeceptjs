@@ -11,7 +11,7 @@ module.exports = function () {
             const strChooseAccountMessage =
                 "The system was not able to select a login role for you based on your usual NetSuite usage. Choose an item from the list below.";
             // Define the actual account for testing. This string will be used to click on a link where the href attribute contains this string.
-            const strTargetAccount = process.env.NS_TARGET_ACCOUNT_SWITCH;
+            const strTargetAccount = process.env.NS_ACCOUNT_ID;
             console.log("Target account", strTargetAccount);
 
             const strTargetRole = process.env.NS_TARGET_ROLE;
@@ -25,7 +25,6 @@ module.exports = function () {
             // I.saveScreenshot("./tests/output/login/1_login_amOnPage_test.png");
            
             console.log("I fill field email and password");
-            console.log(process.env.NS_USERNAME);         
             I.fillField('email', process.env.NS_USERNAME);
             I.fillField('password', process.env.NS_PASSWORD);
                 
@@ -44,7 +43,7 @@ module.exports = function () {
                 console.log("I click link with href text " + strTargetAccount);
 
                 // Using a CSS selector to click on a link where the href attribute contains the target account string.
-                I.click(`a[href*="${strTargetAccount}"]`);
+                I.click(`a[href*="?account_switch=${strTargetAccount}"]`);
                 console.log("I wait 2 seconds");
                 I.wait(2);
 
