@@ -47,7 +47,7 @@ For the 2FAKEY environment variable see the 2FA Secret key section.
 Now you can execute the following command ```npx codeceptjs run``` and see CodeceptJS in action. 
 
 
-### 2FA Secret key
+## 2FA Secret key
 
 In order to be able to use highly privileged roles during your tests you also need to have the 2FA secret key at hand. If you don't have it, please follow the below steps:
 
