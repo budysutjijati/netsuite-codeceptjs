@@ -18,8 +18,9 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.google.nl',
-      show: true
+      url: 'https://www.google.com',
+      show: true,
+      args: ['--lang=en-US'],  // Set language to US English
     }
   },
   plugins: {
